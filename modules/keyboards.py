@@ -33,7 +33,7 @@ def func_kb(user_id):
     kb.button(text=edit_btn, callback_data="edit")
     kb.button(text=lang_btn, callback_data="lang")
     kb.button(text="🤖AI", callback_data="ai")
-    if user_id in config.ADMIN_IDS:
+    if str(user_id) in config.ADMIN_IDS:
         kb.button(text="⚡️Admin", callback_data="admin")
     kb.adjust(4)
     return kb.as_markup()

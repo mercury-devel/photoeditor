@@ -257,7 +257,8 @@ async def ban(call: CallbackQuery, callback_data: dict):
 
 async def admin(call: CallbackQuery):
     await call.answer()
-    await call.message.answer("⚠️Выберите, что нужно делать", reply_markup=admin_kb())
+    if str(call.from_user.id) in config.ADMIN_IDS:
+        await call.message.answer("⚠️Выберите, что нужно делать", reply_markup=admin_kb())
 
 async def spam(call: CallbackQuery, state: FSMContext):
     await call.answer()
