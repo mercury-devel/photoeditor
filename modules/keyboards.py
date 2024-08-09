@@ -19,7 +19,6 @@ def admin_kb():
 def link_kb(user_id):
     text = get_translation("sub_btn", user_id)
     kb = InlineKeyboardBuilder()
-    kb.button(text="🐹 Join Hamster Kombat", url="https://t.me/hamstEr_kombat_bot/start?startapp=kentId6379063793")
     kb.button(text=text, url=config.CHANNEL_LINK)
     kb.adjust(1)
     return kb.as_markup()
