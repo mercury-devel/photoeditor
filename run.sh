@@ -21,7 +21,6 @@ build_image() {
 # Function to create and start the container
 create_and_run_container() {
     echo "Creating and starting container..."
-    docker run -d --name photo_editor --env-file .env photo_editor
     docker update --restart unless-stopped photo_editor
 }
 
