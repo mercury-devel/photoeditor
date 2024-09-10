@@ -15,7 +15,7 @@ show_menu() {
 # Function to perform the build command
 build_image() {
     echo "Building image..."
-    docker build -t photo_editor .
+    docker-compose up --build -d
 }
 
 # Function to create and start the container
